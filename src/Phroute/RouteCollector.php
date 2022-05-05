@@ -403,7 +403,7 @@ class RouteCollector implements RouteDataProviderInterface {
      */
     private function trim($route)
     {
-        return trim($route ?: "", '/');
+        return !empty($route)? trim($route ?: "", '/'):$route;
     }
 
     /**
